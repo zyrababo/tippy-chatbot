@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tippy Chatbot - TIP SHS</title>
+     <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+     <div class="header">
+         <h1><img src="/images/tip_logo.png" alt="TIP Logo" class="tip-logo">TIPPY ChatBot</h1>
+         <p>Your Technological Institute of the Philippines SHS Assistant</p>
+     </div>
+     
+     <div class="container">
+         <div class="chat-container">
+             <div class="chat-header">
+                 Tippy Chatbot - TIP SHS Q.C.
+             </div>
+             
+             <div class="messages" id="chat-messages">
+                 <div class="welcome-container" id="welcome-container">
+                     <div class="welcome-box">
+                         <p class="welcome-text">🚀 Hello! I'm Tippy, your TIP SHS chatbot.</p>
+                         <div class="name-form" id="name-form">
+                             <input type="text" class="name-input" id="name-input" placeholder="What's your name?">
+                             <button class="name-button" id="name-button">Start Chatting</button>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class="typing-indicator" id="typing-indicator">
+                     <div class="typing-dots">
+                         <span></span>
+                         <span></span>
+                         <span></span>
+                     </div>
+                     Tippy is typing...
+                 </div>
+             </div>
+             
+             <div class="input-area">
+                 <input type="text" class="message-input" id="message-input" placeholder="Type your message here..." disabled>
+                 <button class="send-button" id="send-button" disabled>
+                     ➤
+                 </button>
+             </div>
+         </div>
+     </div>
+     <script src="/static/script.js"></script>
+</body>
+</html>
