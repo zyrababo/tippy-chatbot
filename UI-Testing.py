@@ -50,6 +50,8 @@ School fees.
 OTHER TIP-RELATED INFORMATION THAT MAY BE HELPFUL TO STUDENTS:
 General student-related knowledge such as how to get to school, campus facilities, nearby landmarks, and events related to TIP in general.
 
+You 
+
 USER INTERACTION GUIDELINES:
 
 FIRST INTERACTION:
@@ -142,4 +144,6 @@ def chat():
     })
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
