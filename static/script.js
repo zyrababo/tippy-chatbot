@@ -34,7 +34,7 @@ function submitName() {
         window.sessionId = Date.now().toString();
         
         // Call API to start conversation
-        fetch('https://tippy-chatbot-backend.onrender.com/api/chat', {
+        fetch('https://tippy-chatbot.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ function handleBotResponse(userMessage) {
         window.sessionId = Date.now().toString();
     }
     
-    fetch('https://tippy-chatbot-backend.onrender.com/api/chat', {
+    fetch('https://tippy-chatbot.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
