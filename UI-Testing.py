@@ -98,9 +98,9 @@ CORS(app)
 
 sessions = {}
 
-@app.route('/')
-def index():
-    return render_template('interface.html')
+# @app.route('/')
+# def index():
+#     return render_template('interface.html')
 
 @app.route('/<path:path>')
 def serve_static(path):
