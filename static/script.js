@@ -33,8 +33,12 @@ function submitName() {
         // Generate a session ID
         window.sessionId = Date.now().toString();
         
+        const API_URL = import.meta.env.PROD
+        ? 'https://tippy-chatbot.onrender.com/api/chat'
+        : '/api/chat';
+
         // Call API to start conversation
-        fetch('https://tippy-chatbot.onrender.com/api/chat', {
+        fetch(API_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -118,7 +122,11 @@ function handleBotResponse(userMessage) {
         window.sessionId = Date.now().toString();
     }
     
-    fetch('https://tippy-chatbot.onrender.com/api/chat', {
+    const API_URL = import.meta.env.PROD
+        ? 'https://tippy-chatbot.onrender.com/api/chat'
+        : '/api/chat';
+
+        fetch(API_URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

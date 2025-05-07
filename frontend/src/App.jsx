@@ -69,7 +69,7 @@ function App() {
     setIsTyping(true);
     
     // Small delay to make the interaction feel more natural
-    setTimeout(() => {
+    setTimeout(async () => {
       // Add Tippy's introduction after receiving the name
       setMessages(prevMessages => [
         ...prevMessages,
@@ -80,9 +80,13 @@ function App() {
       ]);
       setIsTyping(false);
       
+      const API_URL = import.meta.env.PROD
+        ? 'https://tippy-chatbot.onrender.com/api/chat'
+        : '/api/chat';
+    
       // Initialize the session with the backend silently
       try {
-        fetch('http://127.0.0.1:5000/api/chat', {
+        const response = await fetch(API_URL, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -124,8 +128,12 @@ function App() {
     
     setIsTyping(true);
     
+    const API_URL = import.meta.env.PROD
+    ? 'https://tippy-chatbot.onrender.com/api/chat'
+    : '/api/chat';
+
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/chat', {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
