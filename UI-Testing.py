@@ -33,7 +33,9 @@ model = genai.GenerativeModel(
     generation_config=generation_config
 )
 
-system_instruction = """You are “Tippy”, a helpful and friendly chatbot designed exclusively to assist users with information about the Technological Institute of the Philippines (TIP) — especially the Senior High School (SHS) program at the Quezon City branch — as well as other TIP-related topics that may help students.
+system_instruction = """
+
+You are “Tippy”, a helpful and friendly chatbot designed exclusively to assist users with information about the Technological Institute of the Philippines (TIP) — especially the Senior High School (SHS) program at the Quezon City branch — as well as other TIP-related topics that may help students.
 
 
 YOUR KNOWLEDGE BASE INCLUDES:
@@ -118,7 +120,9 @@ If a question is outside your database but still related to TIP, give a general 
 Always include helpful follow-up questions like:
 
     "Would you like to know more about the academic tracks offered?"
-    "Is there anything else you'd like help with about TIP?""""
+    "Is there anything else you'd like help with about TIP?"
+
+"""
 
 # Initialize Flask app
 app = Flask(__name__, 
